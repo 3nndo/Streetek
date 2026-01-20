@@ -28,8 +28,7 @@
 .btn-primary:hover{
     background-color: var(--primary-btn-hover-color);
     border-color: black solid;
-    box-shadow: var(--primary-shadow-inset-btn-hover-color), var(--primary-glow-btn-hover-color);
-    ;
+    box-shadow: var(--primary-shadow-inset-btn-hover-color);
 }
 
 .btn-secondary{
