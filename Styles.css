@@ -1,0 +1,36 @@
+:root{
+    --primary-btn-color: rgb(71, 128, 182);
+    --primary-btn-border-color: rgb(59, 99, 100);
+    
+    --primary-btn-hover-color: rgb(22, 86, 204);
+    --primary-shadow-inset-btn-hover-color: inset 0px 0px 15px   rgb(30, 33, 190);
+    --primary-glow-btn-hover-color: 0px 0px 15px rgb(30, 33, 190);
+    --primary-btn-hover-border-color: rgb(30, 33, 190);
+
+
+
+    --secondary-btn-hover-color: rgb(77,55,33);
+    --secondary-btn-color: rgb(77,55,33);
+
+}
+
+
+.btn-primary{
+    background-color: var(--primary-btn-color);
+    border-color: var(--primary-btn-border-color);
+}
+
+.btn-primary:hover{
+    background-color: var(--primary-btn-hover-color);
+    border-color: var(--primary-btn-border-hover-color);
+    box-shadow: var(--primary-shadow-inset-btn-hover-color), var(--primary-glow-btn-hover-color);
+}
+
+.btn-secondary{
+    background-color: var(--secondary-btn-color);
+}
+
+.btn-outline-secondary{
+    border-color: var(--secondary-btn-color);
+}
+
