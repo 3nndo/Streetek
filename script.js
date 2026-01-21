@@ -1,18 +1,11 @@
+document.querySelectorAll('.imagen').forEach((img) => {
+  const textoAsociado = img.parentElement.querySelector('.texto');
 
-  const imageprdc = document.getElementsByClassName('imagen');
-  const textprdc = document.getElementsByClassName('texto');
-
-  imageprdc.addEventListener('mouseenter', () => {
-    textprdc.classList.remove('text-hidden');
-    textprdc.classList.add('text-show');
+  img.addEventListener('mouseenter', () => {
+    textoAsociado.classList.replace('text-hidden', 'text-show');
   });
 
-  
-  imageprdc.addEventListener('mouseleave', () => {
-    textprdc.classList.remove('text-show');
-    textprdc.classList.add('text-hidden');
+  img.addEventListener('mouseleave', () => {
+    textoAsociado.classList.replace('text-show', 'text-hidden');
   });
-
-
-
-
+});

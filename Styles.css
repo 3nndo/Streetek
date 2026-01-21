@@ -53,14 +53,19 @@ footer.container{
 
 .text-hidden {
   opacity: 0;
-  height: 0; /* Para que no ocupe espacio si está oculto */
-  overflow: hidden;
+  visibility: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  transform: translateY(10px); /* Efecto de subir un poquito */
 }
 
 .text-show {
-    transition:  500ms;
-    opacity: 1;
-    height: auto;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.texto {
+  pointer-events: none; 
 }
 
 .product .col{
