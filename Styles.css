@@ -46,13 +46,23 @@ footer.container{
     margin-top: 20px;
 }
 
+.imagen{
+    transition: 500ms;
+}
+
+
 .text-hidden {
   opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease; /* Para que aparezca suavemente */
+  height: 0; /* Para que no ocupe espacio si está oculto */
+  overflow: hidden;
 }
 
 .text-show {
-  opacity: 1;
-  visibility: visible;
+    transition:  500ms;
+    opacity: 1;
+    height: auto;
+}
+
+.product .col{
+    transition: 500ms;
 }
