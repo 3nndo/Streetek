@@ -11,7 +11,18 @@
 
     --secondary-btn-hover-color: rgb(77,55,33);
     --secondary-btn-color: rgb(77,55,33);
+}
 
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+footer {
+    margin-top: auto;
 }
 
 .bg-body-tertiary{
@@ -48,20 +59,35 @@ footer.container{
 
 .imagen{
     transition: 500ms;
+    width: 100%;
+    height: auto;
 }
 
 
+.navbar::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px; /* Adjust the height as needed */
+    background: linear-gradient( rgba(7, 104, 196, 0.288), #feb47b00); /* Gradient colors */
+    z-index: -1; /* Ensure it is behind the navbar content */
+    transform: translateY(148px);
+}
+
 .text-hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  transform: translateY(10px); /* Efecto de subir un poquito */
+    opacity: 0;
+    transform: translateY(20px); /* Adjust the value as needed */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    visibility: hidden; /* Prevents interaction when hidden */
 }
 
 .text-show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    visibility: visible; /* Ensures the text is interactive */
 }
 
 .texto {
@@ -70,4 +96,33 @@ footer.container{
 
 .product .col{
     transition: 500ms;
+}
+
+.img-product{
+    transform: translate(0px, -175px);
+    transition: transform 0.3s ease;
+}
+
+.img-product-text-shown{
+    transform: translate(0px, 0px);
+    transition: transform 0.3s ease;
+}
+
+/* Mobile breakpoint - adjust for phones */
+@media (max-width: 767px) {
+    .img-product {
+        transform: translate(0px, -100px);
+    }
+}
+
+.brandImg{
+    transform: translateY(-3px);
+    filter: brightness(10);
+    transition: 200ms;
+}
+
+.brandImg:hover{
+    transform: translateY(-3px);
+    filter: brightness(1);
+
 }

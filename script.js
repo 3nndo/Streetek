@@ -1,11 +1,24 @@
-document.querySelectorAll('.imagen').forEach((img) => {
-  const textoAsociado = img.parentElement.querySelector('.texto');
+document.querySelectorAll('.producto-col').forEach((productoCol) => {
+    const textoAsociado = productoCol.querySelector('.texto');
+    const imagenContenedor = productoCol.querySelector('.imagen');
+    let isAnimating = false;
+    let timeout;
+    
+    productoCol.addEventListener('mouseenter', () => {
+        clearTimeout(timeout);
+        if (!isAnimating) {
+            isAnimating = true;
+            textoAsociado.classList.replace('text-hidden', 'text-show');
+            imagenContenedor.classList.replace('img-product', 'img-product-text-shown');
+        }
+    });
 
-  img.addEventListener('mouseenter', () => {
-    textoAsociado.classList.replace('text-hidden', 'text-show');
-  });
-
-  img.addEventListener('mouseleave', () => {
-    textoAsociado.classList.replace('text-show', 'text-hidden');
-  });
+    productoCol.addEventListener('mouseleave', () => {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => {
+            isAnimating = false;
+            textoAsociado.classList.replace('text-show', 'text-hidden');
+            imagenContenedor.classList.replace('img-product-text-shown', 'img-product');
+        }, 50);
+    });
 });
