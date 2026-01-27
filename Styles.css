@@ -126,3 +126,11 @@ footer.container{
     filter: brightness(1);
 
 }
+
+div.container img.map{
+    margin-top: 20px;
+    border: solid 2px black;
+    border-radius: 10px;
+    display: flex;
+    align-items: end;
+}
