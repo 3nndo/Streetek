@@ -14,7 +14,11 @@
 }
 
 
-body{
+
+
+
+
+body, body.tienda{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -134,3 +138,5 @@ div.container img.map{
     display: flex;
     align-items: end;
 }
+
+
