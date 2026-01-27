@@ -64,7 +64,7 @@ footer.container{
 }
 
 
-.navbar::after{
+.navbarNoProblem::after{
     content: "";
     position: absolute;
     bottom: 0;
