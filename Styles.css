@@ -37,7 +37,7 @@ footer {
 
 .btn-primary{
     background-color: var(--primary-btn-color);
-    border-color: var(--primary-btn-border-color);
+    border-width:0px;
 }
 
 .btn-primary:hover{
