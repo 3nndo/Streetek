@@ -89,24 +89,24 @@ footer.container{
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 150px; /* Adjust the height as needed */
+    height: 150px;                                                          /* Adjust the height as needed */
     background: linear-gradient( rgba(7, 104, 196, 0.288), #feb47b00); /* Gradient colors */
-    z-index: -1; /* Ensure it is behind the navbar content */
+    z-index: -1;                                                           /* Ensure it is behind the navbar content */
     transform: translateY(148px);
 }
 
 .text-hidden {
     opacity: 0;
-    transform: translateY(20px); /* Adjust the value as needed */
+    transform: translateY(20px);                        /* Adjust the value as needed */
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
-    visibility: hidden; /* Prevents interaction when hidden */
+    visibility: hidden;                                 /* Prevents interaction when hidden */
 }
 
 .text-show {
     opacity: 1;
     transform: translateY(0);
     transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition */
-    visibility: visible; /* Ensures the text is interactive */
+    visibility: visible;                                /* Ensures the text is interactive */
 }
 
 .texto {
